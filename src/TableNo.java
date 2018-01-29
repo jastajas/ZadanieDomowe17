@@ -6,22 +6,17 @@ public class TableNo {
         int[] tableNr = new int [10];
         Random rnd = new Random();
 
+        String a = "";
+        String b = "";
+
         for(int i = 0; i<tableNr.length; i++){
 
             tableNr[i] = rnd.nextInt(20);
+            a += " " + tableNr[i];
+            b = tableNr[i] + " " + b;
         }
-
-        int x = 0;
-        do{
-            System.out.print(tableNr[x] + " ");
-            x++;
-        } while(x<tableNr.length);
-
-        x = 9;
-
-        do{
-            System.out.print(tableNr[x] + " ");
-            x--;
-        } while(x>=0);
+        System.out.print(a);
+        System.out.print(" ");
+        System.out.print(b);
     }
 }
